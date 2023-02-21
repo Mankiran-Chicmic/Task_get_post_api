@@ -1,0 +1,20 @@
+
+<table>
+    <thead>
+        <tr>
+<th>User</th>
+<th>Id</th>
+<th>Password</th>
+<th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let i of arr[0];let j=index">
+            <td>{{i.user}}</td>
+            <td>{{i.id}}</td>
+            <td>{{i.password}}</td>
+            <td><button (click)="delete(i.user)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

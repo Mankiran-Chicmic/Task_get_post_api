@@ -1,0 +1,23 @@
+<h1>Login Form</h1>
+<br>
+<form [formGroup]="xForm" (ngSubmit)="loginUser(xForm.value)">
+    <input type="text" ngModel placeholder="Enter Name" name="name" formControlName="user">
+    <br>
+    <span style="color:brown"*ngIf="user && user.invalid && user.touched">This field is not valid</span>
+    <br>
+    <input type="password" ngModel placeholder="Enter Password" name="password" formControlName="password" >
+    <br>
+    <span style="color:brown"*ngIf="password && password.invalid && password.touched">This field is not valid</span>
+    <br>
+    <button type="submit" (click)="loginUser(xForm.value)" [disabled]="xForm.invalid">Login</button>
+    <button type="submit" (click)="onProductsFetch()">Fetch Data</button>
+      <br><br>
+      <!-- <app-comp2></app-comp2> -->
+      <ul>
+        <li *ngFor="let i of arr[0]">
+            {{i.user}}
+        </li>
+    </ul>
+    <!-- <input type="submit" value="FetchProduct" (click)="onProductsFetch()"> -->
+    </form>
+   
